@@ -4,37 +4,44 @@ import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { BackgroundPaths } from '@/components/ui/background-paths';
 import { Hero } from '@/components/ui/hero-1';
+import { Gallery4 } from '@/components/ui/gallery4';
 
 function Index() {
   const [activeSection, setActiveSection] = useState('home');
 
   const services = [
     {
+      id: '1',
       icon: 'Scale',
       title: 'Корпоративное право',
       description: 'Комплексное юридическое сопровождение бизнеса на всех этапах развития'
     },
     {
+      id: '2',
       icon: 'FileText',
       title: 'Договорная работа',
       description: 'Разработка и экспертиза договоров любой сложности с защитой ваших интересов'
     },
     {
+      id: '3',
       icon: 'Briefcase',
       title: 'Арбитражные споры',
       description: 'Представительство в судах всех инстанций и защита в сложных спорах'
     },
     {
+      id: '4',
       icon: 'Shield',
       title: 'Налоговое право',
       description: 'Налоговое планирование и защита от претензий контролирующих органов'
     },
     {
+      id: '5',
       icon: 'Users',
       title: 'Трудовое право',
       description: 'Решение трудовых споров и кадровый аудит компании'
     },
     {
+      id: '6',
       icon: 'Home',
       title: 'Недвижимость',
       description: 'Сопровождение сделок с недвижимостью и защита прав собственности'
@@ -97,30 +104,11 @@ function Index() {
         ctaHref="#contacts"
       />
 
-      <section className="py-20 px-6 relative">
-        <div className="container mx-auto relative z-10">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Наши услуги</h2>
-            <p className="text-xl text-muted-foreground">Комплексная юридическая поддержка для вашего бизнеса</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="group p-6 backdrop-blur-xl bg-white/60 border-white/80 hover:bg-white/80 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-              >
-                <div className="mb-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon name={service.icon as any} className="text-white" size={28} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Gallery4 
+        title="Наши услуги"
+        description="Комплексная юридическая поддержка для вашего бизнеса"
+        items={services}
+      />
 
       <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-secondary/5 relative">
         <div className="container mx-auto relative z-10">
