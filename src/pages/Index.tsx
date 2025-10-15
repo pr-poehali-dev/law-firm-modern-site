@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { BackgroundPaths } from '@/components/ui/background-paths';
+import { Hero } from '@/components/ui/hero-1';
 
 function Index() {
   const [activeSection, setActiveSection] = useState('home');
@@ -88,47 +89,13 @@ function Index() {
         </div>
       </nav>
 
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="container mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
-                Защита ваших интересов
-              </h1>
-              <p className="text-xl text-muted-foreground">
-                Профессиональная юридическая поддержка для бизнеса и частных лиц
-              </p>
-              <div className="flex gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-xl">
-                  Получить консультацию
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                  Наши услуги
-                </Button>
-              </div>
-            </div>
-            <div className="relative animate-scale-in">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
-              <div className="relative backdrop-blur-xl bg-white/40 rounded-3xl p-8 border border-white/60 shadow-2xl">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 p-4 bg-white/60 rounded-xl backdrop-blur">
-                    <Icon name="CheckCircle" className="text-green-500" size={24} />
-                    <span className="font-medium">15+ лет опыта</span>
-                  </div>
-                  <div className="flex items-center gap-4 p-4 bg-white/60 rounded-xl backdrop-blur">
-                    <Icon name="CheckCircle" className="text-green-500" size={24} />
-                    <span className="font-medium">500+ выигранных дел</span>
-                  </div>
-                  <div className="flex items-center gap-4 p-4 bg-white/60 rounded-xl backdrop-blur">
-                    <Icon name="CheckCircle" className="text-green-500" size={24} />
-                    <span className="font-medium">98% положительных решений</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero 
+        eyebrow="Профессиональная защита"
+        title="Защита ваших интересов"
+        subtitle="Команда опытных юристов для решения любых правовых вопросов. 15+ лет опыта, 500+ выигранных дел."
+        ctaLabel="Получить консультацию"
+        ctaHref="#contacts"
+      />
 
       <section className="py-20 px-6 relative">
         <div className="container mx-auto relative z-10">
