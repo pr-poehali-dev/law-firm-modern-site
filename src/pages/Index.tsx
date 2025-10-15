@@ -59,7 +59,8 @@ function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">
+      <BackgroundPaths />
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/70 border-b border-blue-100">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -87,8 +88,7 @@ function Index() {
         </div>
       </nav>
 
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <BackgroundPaths />
+      <section className="relative pt-32 pb-20 px-6">
         <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
@@ -130,8 +130,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
+      <section className="py-20 px-6 relative">
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Наши услуги</h2>
             <p className="text-xl text-muted-foreground">Комплексная юридическая поддержка для вашего бизнеса</p>
@@ -155,8 +155,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto">
+      <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-secondary/5 relative">
+        <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">О компании</h2>
@@ -198,8 +198,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6">
-        <div className="container mx-auto">
+      <section className="py-20 px-6 relative">
+        <div className="container mx-auto relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Успешные кейсы</h2>
             <p className="text-xl text-muted-foreground">Примеры наших побед в сложных делах</p>
@@ -227,8 +227,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-primary to-secondary">
-        <div className="container mx-auto">
+      <section className="py-20 px-6 bg-gradient-to-br from-primary to-secondary relative">
+        <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Свяжитесь с нами</h2>
             <p className="text-xl mb-8 opacity-90">
@@ -266,8 +266,8 @@ function Index() {
         </div>
       </section>
 
-      <footer className="py-8 px-6 bg-primary/5 border-t border-primary/10">
-        <div className="container mx-auto text-center text-muted-foreground">
+      <footer className="py-8 px-6 bg-primary/5 border-t border-primary/10 relative">
+        <div className="container mx-auto text-center text-muted-foreground relative z-10">
           <p>© 2024 LexPro. Все права защищены.</p>
         </div>
       </footer>
