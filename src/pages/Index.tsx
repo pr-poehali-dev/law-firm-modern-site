@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { BackgroundPaths } from '@/components/ui/background-paths';
 
 function Index() {
   const [activeSection, setActiveSection] = useState('home');
@@ -86,8 +87,9 @@ function Index() {
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        <BackgroundPaths />
+        <div className="container mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
               <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
