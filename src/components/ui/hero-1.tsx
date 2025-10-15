@@ -59,19 +59,23 @@ export function Hero({
       )}
 
       <h1
-        className="animate-fade-in -translate-y-4 text-balance 
+        className="animate-fade-in text-balance 
         bg-gradient-to-br from-black from-30% to-black/40 
         bg-clip-text py-6 text-5xl font-semibold leading-none tracking-tighter 
-        text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl 
-        dark:from-white dark:to-white/40"
+        text-transparent sm:text-6xl md:text-7xl lg:text-8xl 
+        dark:from-white dark:to-white/40
+        [animation-fill-mode:forwards]"
+        style={{ animationDelay: '0.1s' }}
       >
         {title}
       </h1>
 
       <p
-        className="animate-fade-in mb-12 -translate-y-4 text-balance 
+        className="animate-fade-in mb-12 text-balance 
         text-lg tracking-tight text-gray-600 dark:text-gray-400 
-        opacity-0 md:text-xl"
+        md:text-xl
+        [animation-fill-mode:forwards]"
+        style={{ animationDelay: '0.3s', opacity: 0 }}
       >
         {subtitle}
       </p>
