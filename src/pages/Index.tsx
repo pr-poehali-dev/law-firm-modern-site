@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { BackgroundPaths } from '@/components/ui/background-paths';
 import { Hero } from '@/components/ui/hero-1';
-import { Gallery4 } from '@/components/ui/gallery4';
+import { GlareCard } from '@/components/ui/glare-card';
 
 function Index() {
   const [activeSection, setActiveSection] = useState('home');
@@ -104,11 +103,29 @@ function Index() {
         ctaHref="#contacts"
       />
 
-      <Gallery4 
-        title="Наши услуги"
-        description="Комплексная юридическая поддержка для вашего бизнеса"
-        items={services}
-      />
+      <section className="py-20 px-6 relative">
+        <div className="container mx-auto relative z-10">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h2>
+            <p className="text-xl">Комплексная юридическая поддержка для вашего бизнеса</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {services.map((service) => (
+              <GlareCard key={service.id} className="flex flex-col items-start justify-end py-8 px-6">
+                <div className="mb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center">
+                    <Icon name={service.icon as any} className="text-white" size={28} />
+                  </div>
+                </div>
+                <p className="font-bold text-white text-lg mb-3">{service.title}</p>
+                <p className="font-normal text-base text-neutral-200">
+                  {service.description}
+                </p>
+              </GlareCard>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-secondary/5 relative">
         <div className="container mx-auto relative z-10">
