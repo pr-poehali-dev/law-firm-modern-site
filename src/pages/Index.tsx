@@ -5,6 +5,8 @@ import Icon from '@/components/ui/icon';
 import { BackgroundPaths } from '@/components/ui/background-paths';
 import { Hero } from '@/components/ui/hero-1';
 import { GlareCard } from '@/components/ui/glare-card';
+import Preloader from '@/components/premium/preloader';
+import AnimatedHero from '@/components/premium/animated-hero';
 
 function Index() {
   const [activeSection, setActiveSection] = useState('home');
@@ -68,6 +70,7 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">
+      <Preloader />
       <BackgroundPaths />
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/70 border-b border-blue-100">
         <div className="container mx-auto px-6 py-4">
@@ -96,13 +99,7 @@ function Index() {
         </div>
       </nav>
 
-      <Hero 
-        eyebrow="Профессиональная защита"
-        title="Защита ваших интересов"
-        subtitle="Команда опытных юристов для решения любых правовых вопросов. 15+ лет опыта, 500+ выигранных дел."
-        ctaLabel="Получить консультацию"
-        ctaHref="#contacts"
-      />
+      <AnimatedHero />
 
       <section className="py-20 px-6 relative">
         <div className="container mx-auto relative z-10">
