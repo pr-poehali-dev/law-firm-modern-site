@@ -98,8 +98,27 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: "Open Sans", sans-serif;
+    @apply bg-background;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  body * {
+    background: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0.4));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+  }
+
+  .dark body * {
+    background: linear-gradient(
+      to bottom right,
+      white 30%,
+      rgba(255, 255, 255, 0.4)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   h1,
